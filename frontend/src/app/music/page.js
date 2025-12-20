@@ -42,7 +42,7 @@ export default function Music() {
           animate={{ opacity: 1 }}
           className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur px-6 py-4 rounded-xl"
         >
-          <p className="bg-white/5 hover:bg-white/10 transition p-6 rounded-xl"
+          <p className="bg-white/5 hover:bg-white/10 transition backdrop-blur border border-white/10 p-6 rounded-2xl"
 >{current.title}</p>
           <audio ref={audioRef} controls src={current.audioUrl} />
         </motion.div>

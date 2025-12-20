@@ -3,10 +3,17 @@
 import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import { motion } from "framer-motion";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
 
 export default function Poems() {
   const [poems, setPoems] = useState([]);
 
+  
   useEffect(() => {
     api.get("/poems").then(res => setPoems(res.data));
   }, []);
@@ -22,12 +29,14 @@ export default function Poems() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="bg-white/5 p-6 rounded-xl backdrop-blur"
+          className="bg-white/5 backdrop-blur border border-white/10 p-6 rounded-2xl"
+
           >
             <h2 className="text-xl mb-2">{poem.title}</h2>
-            <p className="text-gray-300 whitespace-pre-line">
-              {poem.content}
-            </p>
+           <p className={`${playfair.className} text-gray-300 whitespace-pre-line leading-relaxed`}>
+  {poem.content}
+</p>
+
           </motion.div>
         ))}
       </div>
