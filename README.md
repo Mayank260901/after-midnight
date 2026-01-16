@@ -1,177 +1,129 @@
-🖤 After Midnight
-After Midnight is a private, full-stack web application designed to explore how technology can present emotional content with restraint, privacy, and intention.
+# 🌙After Midnight  
+**After Midnight** is a private, emotion-driven full-stack web application designed to express feelings, thoughts, poetry, and music in a secure and meaningful way.  
+The platform blends **modern web technologies** with a **minimal, dark, intimate user experience**, accessible only via a private token.
 
-The project focuses on calm UX, minimal design, and clean system architecture, combining a modern Java backend with a polished React frontend.
+This project was built as a **production-ready full-stack application**, deployed end-to-end using modern cloud platforms.
+his project was built as a production-ready full-stack application, deployed end-to-end using modern cloud platforms.
 
-This is not a social platform.
-It is a quiet, intentionally private digital space.
+## ✨ Key Features
 
-🌌 Key Features
-🔐 Private Access (Token-Based)
+- 🔐 **Private Token-Based Access**  
+  Only users with a valid access token can unlock the content.
 
-No login, no accounts, no tracking
+- 🖤 **Dark, Minimal UI**  
+  Designed for calm, emotional readability — especially late-night use.
 
-Access granted only via a secret link/token
+- 📝 **Poems & Thoughts**  
+  Handwritten poems, reflections, and “3 AM thoughts” stored securely.
 
-✍️ Poems
+- 🎵 **Music Sharing**  
+  Music composed and written using AI, integrated into the experience.
 
-Stored in MySQL
+- ⚡ **Smooth Animations & Loading States**  
+  Clean transitions with graceful loaders for a premium feel.
 
-Rendered with soft typography and subtle animations
 
-🌙 3 AM Thoughts
+   
+## 🏗️ Tech Stack
 
-Scroll-based storytelling
+### Frontend
+- Next.js (App Router)
+- React
+- Axios
+- Tailwind CSS
+- Dark Theme UI
+- Deployed on Vercel
 
-One thought per screen for focus and calm pacing
+### Backend
+- Java Spring Boot
+- Spring Data JPA
+- REST APIs
+- Token validation logic
+- Deployed on Render
 
-🎧 Music Player
+### Database
+- PostgreSQL
+- Hosted on Render
+- Production-ready schema
 
-Audio streamed from external sources
+## 🔐 Access Flow
 
-Minimal UI with clean state handling
+1. User opens the frontend application  
+2. A **private access token** is required  
+3. Token is validated via backend API  
+4. If valid → content is unlocked  
+5. If invalid → access is denied  
 
-🧭 Global Navigation
+This ensures the platform remains **personal and intentional**.
 
-Fixed, dark navbar
+## 🌍 Live URLs
 
-Active route highlighting
+- **Frontend (Vercel)**  
+  https://after-midnight.vercel.app  
 
-No visual noise
+- **Direct Access Link (With Token)**  
+  https://after-midnight.vercel.app/?token=midnight-only  
 
-🧠 Design Philosophy
-Less UI is more meaning
+- **Backend (Render API)**  
+  https://after-midnight-backend.onrender.com  
 
-Silence is part of the experience
 
-The user controls pace and attention
+## 🧪 Sample API Endpoint
 
-No analytics, no pressure, no obligation
+    GET /api/access/validate?token=midnight-only
 
-Every animation, color, and interaction is intentionally restrained.
+Response:
 
-🏗️ System Architecture
-Frontend (Next.js + Tailwind + Framer Motion)
-        |
-        |  REST APIs (Axios)
-        v
-Backend (Spring Boot)
-        |
-        |  JPA / Hibernate
-        v
-Database (MySQL)
-🛠️ Tech Stack
-Backend
-Java 17
+    true
 
-Spring Boot
+## ⚙️ Environment Variables
 
-Spring Data JPA
+### Frontend (.env.production)
 
-Hibernate
+    NEXT_PUBLIC_API_BASE_URL=https://after-midnight-backend.onrender.com
 
-MySQL
+### Backend (Render Environment Variables)
 
-RESTful APIs
+    DB_URL=jdbc:postgresql://<host>:5432/<database>
+    DB_USERNAME=<username>
+    DB_PASSWORD=<password>
+    PORT=8080
+    
+## 🚀 Deployment Summary
 
-Frontend
-Next.js (App Router)
+   - Frontend deployed via **Vercel** (using GitHub integration)
+   - Backend deployed via **Render** (as a Docker-based web service)
+   - PostgreSQL Database provisioned on **Render** 
+   - Secure environment variables configured for production
+   - External database connections handled using production credentials  
 
-React
+## 🧠 Why This Project Matters
 
-JavaScript (no TypeScript)
-
-Tailwind CSS
-
-Framer Motion
-
-Axios
-
-Other
-Git & GitHub
-
-MySQL Workbench
-
-IntelliJ IDEA
-
-VS Code
-
-🔐 Private Access Flow
-A single access token is stored in the database
-
-Frontend checks token via backend API
-
-If valid → site unlocks
-
-If invalid → private message is shown
-
-No authentication UI.
-No user data stored.
-
-📂 Project Structure
-after-midnight/
-├── backend/
-│   ├── controller/
-│   ├── model/
-│   ├── repository/
-│   └── config/
-│
-├── frontend/
-│   ├── src/
-│   │   ├── app/
-│   │   ├── components/
-│   │   └── lib/
-│
-└── README.md
-🚀 Running Locally
-Backend
-cd backend
-mvn spring-boot:run
-Runs on:
-
-http://localhost:8080
-Frontend
-cd frontend
-npm install
-npm run dev
-Runs on:
-
-http://localhost:3000
-🌑 Example Access
-http://localhost:3000?token=midnight-only
-(Replace token in production)
-
-📌 Why This Project Matters
 This project demonstrates:
 
-Full-stack system design
+   - Real-world **full-stack architecture**
+   - Production-level deployment experience
+   - Secure backend design and database integration
+   - Clean separation between frontend and backend
+   - Thoughtful UI/UX design with emotional intent 
+   - Emotional storytelling through technology
+   - 
+It serves as both a **technical portfolio project** and a **creative expression built with purpose**.
+                          
 
-Clean backend architecture
+## 👨‍💻 Author
 
-Thoughtful frontend engineering
+**Mayank Bhargava**  
+Full-Stack Java Developer  
 
-Respect for user privacy
+- Java · Spring Boot · PostgreSQL  
+- React · Next.js · REST APIs  
+- Passionate about building meaningful, real-world applications  
 
-UI restraint and emotional intelligence
 
-It intentionally avoids features that create pressure, dependency, or noise.
+## 📌 Final Note
 
-📖 Project Story (For Recruiters / Reviewers)
-After Midnight was built as an exploration of how software can present deeply personal content without exploiting attention or data.
-
-Instead of focusing on engagement metrics, the project prioritizes privacy, pacing, and minimalism.
-
-Technically, it demonstrates a complete full-stack implementation using Spring Boot, MySQL, and Next.js, with secure access control and clean separation of concerns.
-
-Design decisions were guided by one question:
-Does this add clarity, or does it add noise?
-
-🧑‍💻 Author
-Mayank Bhargava
-Java | Spring Boot | Full-Stack Developer
-
-🖤 Closing Note
-Some projects are meant to scale.
-Some are meant to be understood quietly.
-
-This one chooses the latter.
+> Some projects are built to scale.  
+> Some are built to express.  
+>  
+> **After Midnight** was built to do both.
