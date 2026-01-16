@@ -1,0 +1,23 @@
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/after_midnight}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+logging:
+  level:
+    com.aftermidnight: DEBUG
+
+jwt:
+  secret: defaultSecretKeyWithAtLeast256BitsForHS256Algorithm
+  expiration: 86400000
