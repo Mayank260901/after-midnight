@@ -125,5 +125,5 @@ Full-Stack Java Developer
 
 > Some projects are built to scale.  
 > Some are built to express.  
->  
+>
 > **After Midnight** was built to do both.
